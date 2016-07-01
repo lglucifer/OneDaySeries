@@ -31,6 +31,7 @@
 		061BC9FE1D2637AD004508A1 /* ODSCardWebViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9FD1D2637AD004508A1 /* ODSCardWebViewCell.m */; };
 		061BCA001D2639DF004508A1 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 061BC9FF1D2639DF004508A1 /* test.html */; };
 		061BCA031D263BA8004508A1 /* TWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BCA021D263BA8004508A1 /* TWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		061BCA0C1D26492A004508A1 /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BCA0B1D26492A004508A1 /* DMWebView.m */; };
 		062B19E61D2398B200483029 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B19E51D2398B200483029 /* main.m */; };
 		062B19E91D2398B200483029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B19E81D2398B200483029 /* AppDelegate.m */; };
 		062B19F11D2398B200483029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062B19F01D2398B200483029 /* Assets.xcassets */; };
@@ -124,6 +125,8 @@
 		061BC9FF1D2639DF004508A1 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		061BCA011D263BA8004508A1 /* TWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWebView.h; sourceTree = "<group>"; };
 		061BCA021D263BA8004508A1 /* TWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWebView.m; sourceTree = "<group>"; };
+		061BCA0A1D26492A004508A1 /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
+		061BCA0B1D26492A004508A1 /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
 		062B19E11D2398B200483029 /* OneDaySeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneDaySeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062B19E51D2398B200483029 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		062B19E71D2398B200483029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -435,6 +438,8 @@
 				062B1A391D23B0B700483029 /* ODSCardCollectionViewFlowLayout.m */,
 				062B1A3B1D23BCA400483029 /* ODSMoreOperationView.h */,
 				062B1A3C1D23BCA400483029 /* ODSMoreOperationView.m */,
+				061BCA0A1D26492A004508A1 /* DMWebView.h */,
+				061BCA0B1D26492A004508A1 /* DMWebView.m */,
 				062B1A861D23C70800483029 /* ODSAudioPlayView.h */,
 				062B1A871D23C70800483029 /* ODSAudioPlayView.m */,
 				061BCA011D263BA8004508A1 /* TWebView.h */,
@@ -686,6 +691,7 @@
 				061BC9CB1D2605D1004508A1 /* NSNumber+YYAdd.m in Sources */,
 				061BC9ED1D260C51004508A1 /* JSONAPI.m in Sources */,
 				062B1A0F1D23A02100483029 /* ODSBaseViewController.m in Sources */,
+				061BCA0C1D26492A004508A1 /* DMWebView.m in Sources */,
 				062B1A321D23A2CB00483029 /* View+MASAdditions.m in Sources */,
 				062B1A471D23BD7300483029 /* ODSImageCardCell.m in Sources */,
 				062B1A2A1D23A2CB00483029 /* MASCompositeConstraint.m in Sources */,

@@ -15,7 +15,7 @@
 @implementation ODSCardWebViewCell
 
 - (void)setupSubviewWithContainerView:(UIView *)containerView {
-    UIWebView *webView = [[UIWebView alloc] init];
+    DMWebView *webView = [[DMWebView alloc] init];
     webView.backgroundColor = [UIColor colorWithRGB:0xF5F3C7];
     webView.scrollView.backgroundColor = [UIColor colorWithRGB:0xF5F3C7];
     webView.opaque = NO;
@@ -27,25 +27,15 @@
         make.edges.mas_equalTo(containerView).insets(UIEdgeInsetsZero);
     }];
     
-    ODSMoreOperationView *operationView = [[ODSMoreOperationView alloc] initWithFrame:CGRectZero];
+    ODSMoreOperationView *operationView = [[ODSMoreOperationView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 40)];
     operationView.hidden = YES;
-    [webView.scrollView addSubview:operationView];
+    self.webView.footerView = operationView;
     self.operationView = operationView;
-    
-//    UIView *webBrowserView = nil;
-//    for (UIView *subview in self.subviews) {
-//        if ([subview isKindOfClass:NSClassFromString(@"UIWebBrowserView")]) {
-//            webBrowserView = subview;
-//            continue;
-//        }
-//    }
-//    [operationView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.webView.scrollView);
-////        make.bottom.mas_equalTo(self.webView.scrollView.mas_bottom).mas_offset(-10);
-//        make.top.mas_equalTo(webBrowserView.mas_bottom).mas_offset(10);
-//        make.width.mas_equalTo(self.webView.scrollView);
-//        make.height.mas_equalTo(30);
-//    }];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.webView.bounds = self.bounds;
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -58,17 +48,6 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.operationView.hidden = NO;
-    CGRect frame = webView.frame;
-//    frame.size.height = self.bounds.size.height;
-//    webView.frame = frame;
-    CGSize fittingSize = [webView sizeThatFits:CGSizeZero];
-    frame.size = fittingSize;
-    frame.size.height += 40;
-////    webView.frame = frame;
-    webView.scrollView.contentSize = frame.size;
-//    [webView mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.height.mas_equalTo(frame.size.height);
-//    }];
 }
 
 @end

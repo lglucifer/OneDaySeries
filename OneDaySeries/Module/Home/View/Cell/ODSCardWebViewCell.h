@@ -7,9 +7,10 @@
 //
 
 #import "ODSCardCollectionViewCell.h"
+#import "DMWebView.h"
 
 @interface ODSCardWebViewCell : ODSCardCollectionViewCell
 
-@property (nonatomic, weak) UIWebView *webView;
+@property (nonatomic, weak) DMWebView *webView;
 
 @end
