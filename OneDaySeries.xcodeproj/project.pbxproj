@@ -91,6 +91,7 @@
 		062B1A881D23C70800483029 /* ODSAudioPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B1A871D23C70800483029 /* ODSAudioPlayView.m */; };
 		06CDF7D81D24E91600353D31 /* TimelineList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CDF7D71D24E91500353D31 /* TimelineList.plist */; };
 		D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */; };
+		D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -270,6 +271,8 @@
 		06CDF7D71D24E91500353D31 /* TimelineList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimelineList.plist; sourceTree = "<group>"; };
 		D82FFDEF1D2657A300DE078C /* ODSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSSettingViewController.h; sourceTree = "<group>"; };
 		D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSSettingViewController.m; sourceTree = "<group>"; };
+		D82FFDF21D26660300DE078C /* ODSCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCollectionViewController.h; sourceTree = "<group>"; };
+		D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -696,6 +699,8 @@
 			children = (
 				D82FFDEF1D2657A300DE078C /* ODSSettingViewController.h */,
 				D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */,
+				D82FFDF21D26660300DE078C /* ODSCollectionViewController.h */,
+				D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -787,6 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */,
 				062B1A4A1D23BD8500483029 /* ODSTextCardCell.m in Sources */,
 				062B1A311D23A2CB00483029 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				061BC9CF1D2605D1004508A1 /* UIDevice+YYAdd.m in Sources */,
