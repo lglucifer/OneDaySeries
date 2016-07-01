@@ -21,13 +21,14 @@
 
 @property (nonatomic, copy) NSArray *items;
 
+@property (nonatomic, weak) ODSTextCardCell *textCardCell;
+
 @end
 
 @implementation ODSHomeViewController
 
 - (void)inner_PushSetting:(UIBarButtonItem *)sender {
-    ODSSettingViewController * settingV = [[ODSSettingViewController alloc] init];
-    [self.navigationController pushViewController:settingV animated:YES];
+
 }
 
 - (void)viewDidLoad {
@@ -65,6 +66,9 @@
         NSMutableArray *asyncItems = [[NSMutableArray alloc] initWithCapacity:100];
         for (int i = 0; i < 100; i++) {
             NSInteger mediaType = arc4random() % 3;
+            if (i == 0) {
+                mediaType = 0;
+            }
             if (mediaType == 0) {
                 ODSAudioCardModel *audioCardModel = [[ODSAudioCardModel alloc] init];
                 audioCardModel.mediaType = ODSCardMediaType_Audio;
@@ -118,6 +122,25 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.items.count;
+}
+
+//- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+//    if ([cell isKindOfClass:[ODSTextCardCell class]]) {
+//        
+//    }
+//}
+//
+//- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"didEndDisplayingCell");
+//    if ([cell isKindOfClass:[ODSTextCardCell class]]) {
+//        self.textCardCell = (ODSTextCardCell *)cell;
+//    }
+//}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:scrollView.contentOffset];
+    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    
 }
 
 @end

@@ -12,7 +12,8 @@
 
 + (void)initialize {
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:16.f], NSForegroundColorAttributeName: [UIColor yellowColor]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRGB:0x03225C]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:16.f], NSForegroundColorAttributeName: [UIColor colorWithRGB:0x03225C]}];
 }
 
 - (void)viewDidLoad {
