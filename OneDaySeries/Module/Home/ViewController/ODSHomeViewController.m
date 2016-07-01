@@ -28,7 +28,8 @@
 @implementation ODSHomeViewController
 
 - (void)inner_PushSetting:(UIBarButtonItem *)sender {
-
+    ODSSettingViewController * setv = [[ODSSettingViewController alloc] init];
+    [self.navigationController pushViewController:setv animated:YES];
 }
 
 - (void)viewDidLoad {

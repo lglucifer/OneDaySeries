@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ODSBaseViewController : UIViewController
+@interface ODSBaseViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @end

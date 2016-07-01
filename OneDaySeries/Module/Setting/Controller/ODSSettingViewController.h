@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ODSSettingViewController : UIViewController
+#import "ODSBaseViewController.h"
+@interface ODSSettingViewController : ODSBaseViewController
 
 @end
