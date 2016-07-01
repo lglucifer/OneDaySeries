@@ -23,9 +23,18 @@
 
 @implementation ODSHomeViewController
 
+- (void)inner_PushSetting:(UIBarButtonItem *)sender {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    UIImage *image = [UIImage imageNamed:@"chaifei_menu"];
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:self action:@selector(inner_PushSetting:)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
     ODSCardCollectionViewFlowLayout *flowLayout = [[ODSCardCollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width - 20,

@@ -31,7 +31,9 @@
     self.textCardModel = data;
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"test" ofType:@"html"];
     NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:filePath]];
+    dispatch_async(dispatch_queue_create(NULL, NULL), ^{
+       [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:filePath]]; 
+    });
 }
 
 @end
