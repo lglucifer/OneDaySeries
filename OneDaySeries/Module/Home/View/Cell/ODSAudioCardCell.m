@@ -40,21 +40,38 @@
         [self.scrollView addSubview:audioPlayView];
         self.audioPlayView = audioPlayView;
         
-        [audioPlayView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(albumImageV.mas_bottom).mas_offset(20);
-            make.left.mas_equalTo(self.scrollView).mas_offset(0);
-            make.width.mas_equalTo(self.scrollView.mas_width);
-            make.height.mas_equalTo(55);
-        }];
-        
-        [self.operationView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.scrollView);
-            make.top.mas_equalTo(audioPlayView.mas_bottom).mas_offset(0);
-            make.width.mas_equalTo(self.scrollView.mas_width);
-            make.height.mas_equalTo(30);
-        }];
-        self.operationView.hideSepLine = YES;
-        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.contentView.frame), [UIScreen mainScreen].bounds.size.width - 20 + 55 + 30 + 10);
+        BOOL iPhone4 = [UIScreen mainScreen].bounds.size.height <= 480 ? YES : NO;
+        if (iPhone4) {
+            [audioPlayView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(albumImageV.mas_bottom).mas_offset(20);
+                make.left.mas_equalTo(self.scrollView).mas_offset(0);
+                make.width.mas_equalTo(self.scrollView.mas_width);
+                make.height.mas_equalTo(55);
+            }];
+            
+            [self.operationView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.scrollView);
+                make.top.mas_equalTo(audioPlayView.mas_bottom).mas_offset(0);
+                make.width.mas_equalTo(self.scrollView.mas_width);
+                make.height.mas_equalTo(30);
+            }];
+            self.operationView.hideSepLine = YES;
+        } else {            
+            [self.operationView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.scrollView);
+                make.bottom.mas_equalTo(self.scrollView.superview.mas_bottom).mas_offset(-30);
+                make.width.mas_equalTo(self.scrollView.mas_width);
+                make.height.mas_equalTo(30);
+            }];
+            
+            [audioPlayView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.mas_equalTo(self.operationView.mas_top).mas_offset(-10);
+                make.left.mas_equalTo(self.scrollView).mas_offset(0);
+                make.width.mas_equalTo(self.scrollView.mas_width);
+                make.height.mas_equalTo(55);
+            }];
+            self.operationView.hideSepLine = YES;
+        }
     }
     return self;
 }
