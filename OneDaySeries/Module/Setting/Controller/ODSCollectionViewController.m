@@ -7,7 +7,7 @@
 //
 
 #import "ODSCollectionViewController.h"
-
+#import "UIImageView+WebCache.h"
 @interface HCell : UICollectionViewCell
 @property (nonatomic,retain)UIImageView * albumView;
 @property (nonatomic,retain)UILabel * desL;
@@ -28,6 +28,8 @@
         b.backgroundColor = [UIColor whiteColor];
         b.layer.cornerRadius = 10;
         b.layer.masksToBounds = YES;
+        b.layer.borderWidth = 1;
+        b.layer.borderColor = [[UIColor colorWithRGB:0xdcdcdc] CGColor];
         [self.contentView addSubview:b];
 
         self.albumView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, myWidth, 2*myWidth/3)];
@@ -37,12 +39,12 @@
         
         self.desL = [[UILabel alloc] initWithFrame:CGRectMake(5, myWidth-(myWidth/3-10)/2-5, myWidth-10, (myWidth/3-10)/2)];
         self.desL.textColor = [UIColor colorWithWhite:120/255.0f alpha:1];
-        self.desL.font = [UIFont systemFontOfSize:15];
+        self.desL.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:self.desL];
-        self.desL.text = @"看着鱼的猫咪，干瞪眼";
+        self.desL.text = @"看着鱼的猫咪，干瞪眼啊";
         
         self.timeL = [[UILabel alloc] initWithFrame:CGRectMake(5, 2*myWidth/3+5, myWidth-10, (myWidth/3-10)/2)];
-        self.timeL.textColor = [UIColor colorWithRed:0.235 green:0.776 blue:1 alpha:1];
+        self.timeL.textColor = [UIColor colorWithRGB:0x03225C];
         self.timeL.font = [UIFont systemFontOfSize:12];
         [self.contentView addSubview:self.timeL];
         self.timeL.text = @"June. 23, 2015";
@@ -56,18 +58,15 @@
 {
     [super viewDidLoad];
     
-    currentPage = 0;
+    self.title = @"我的收藏";
     
-    self.view.backgroundColor = [UIColor clearColor];
-    UIImageView * h = [[UIImageView alloc] initWithFrame:self.view.frame];
-    h.image = [UIImage imageNamed:@"background"];
-    [self.view addSubview:h];
+    currentPage = 0;
     
     
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc]init];
     float width = (self.view.frame.size.width-30)/2;
     layout.itemSize = CGSizeMake(width,width);
-    layout.sectionInset = UIEdgeInsetsMake(40, 10, 10, 10);
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     layout.minimumInteritemSpacing = 10;
     layout.minimumLineSpacing = 10;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -98,7 +97,7 @@
 {
     static NSString *hCellIdentifier = @"hccell";
     HCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:hCellIdentifier forIndexPath:indexPath];
-    [cell.albumView setImage:[UIImage imageNamed:@"exmp_pic_list"]];
+    [cell.albumView sd_setImageWithURL:[NSURL URLWithString:@"http://i9.topit.me/9/12/af/1108263372db4af129o.jpg"]];
 //    cell.albumView.sd_imageURL = [NSURL URLWithString:@"http://i9.topit.me/9/12/af/1108263372db4af129o.jpg"];
 //    cell.headView.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?imageView2/2/w/50",petalk.petInfo.headImgURL]];
 //    cell.nameL.text = petalk.petInfo.nickname;

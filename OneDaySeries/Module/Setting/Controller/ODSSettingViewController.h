@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ODSBaseViewController.h"
-@interface ODSSettingViewController : ODSBaseViewController
+@interface ODSSettingViewController : ODSBaseViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end
