@@ -75,6 +75,7 @@
 		062B1A851D23BFEF00483029 /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B1A731D23BFEF00483029 /* NSData+DOUMappedFile.m */; };
 		062B1A881D23C70800483029 /* ODSAudioPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B1A871D23C70800483029 /* ODSAudioPlayView.m */; };
 		06CDF7D81D24E91600353D31 /* TimelineList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CDF7D71D24E91500353D31 /* TimelineList.plist */; };
+		D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +222,8 @@
 		062B1A861D23C70800483029 /* ODSAudioPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSAudioPlayView.h; sourceTree = "<group>"; };
 		062B1A871D23C70800483029 /* ODSAudioPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSAudioPlayView.m; sourceTree = "<group>"; };
 		06CDF7D71D24E91500353D31 /* TimelineList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimelineList.plist; sourceTree = "<group>"; };
+		D82FFDEF1D2657A300DE078C /* ODSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSSettingViewController.h; sourceTree = "<group>"; };
+		D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +391,7 @@
 		062B19FC1D239AAE00483029 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D82FFDE81D2656EC00DE078C /* Setting */,
 				062B1A031D239CA900483029 /* Base */,
 				062B19FF1D239B0500483029 /* Home */,
 			);
@@ -592,6 +596,39 @@
 			path = DouAudioStreamer;
 			sourceTree = "<group>";
 		};
+		D82FFDE81D2656EC00DE078C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D82FFDE91D2656EC00DE078C /* Controller */,
+				D82FFDEA1D2656EC00DE078C /* Model */,
+				D82FFDEB1D2656EC00DE078C /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D82FFDE91D2656EC00DE078C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D82FFDEF1D2657A300DE078C /* ODSSettingViewController.h */,
+				D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D82FFDEA1D2656EC00DE078C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D82FFDEB1D2656EC00DE078C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -679,6 +716,7 @@
 				061BC9EC1D260C51004508A1 /* JSONModelError.m in Sources */,
 				061BC9F11D260C51004508A1 /* JSONValueTransformer.m in Sources */,
 				061BC9CE1D2605D1004508A1 /* UIColor+YYAdd.m in Sources */,
+				D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */,
 				062B19E91D2398B200483029 /* AppDelegate.m in Sources */,
 				062B19E61D2398B200483029 /* main.m in Sources */,
 				061BC9CD1D2605D1004508A1 /* UIButton+VerticalTitle.m in Sources */,

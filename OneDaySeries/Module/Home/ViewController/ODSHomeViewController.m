@@ -12,6 +12,8 @@
 #import "ODSAudioCardCell.h"
 #import "ODSTextCardCell.h"
 #import "ODSImageCardCell.h"
+#import "ODSNavigationController.h"
+#import "ODSSettingViewController.h"
 
 @interface ODSHomeViewController()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -24,7 +26,8 @@
 @implementation ODSHomeViewController
 
 - (void)inner_PushSetting:(UIBarButtonItem *)sender {
-    
+    ODSSettingViewController * settingV = [[ODSSettingViewController alloc] init];
+    [self.navigationController pushViewController:settingV animated:YES];
 }
 
 - (void)viewDidLoad {
