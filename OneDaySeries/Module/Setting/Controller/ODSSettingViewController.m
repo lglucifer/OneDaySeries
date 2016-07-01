@@ -68,8 +68,8 @@
     }
     UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, ODSScreenWidth-50, 50)];
     titleLabel.backgroundColor = [UIColor clearColor];
-    [titleLabel setTextColor:[UIColor colorWithWhite:120/255.0f alpha:1]];
-    titleLabel.font = indexPath.row==0?[UIFont boldSystemFontOfSize:16]:[UIFont systemFontOfSize:16];
+    [titleLabel setTextColor:[UIColor colorWithWhite:100/255.0f alpha:1]];
+    titleLabel.font = [UIFont systemFontOfSize:15];
     [cell.contentView addSubview:titleLabel];
 
     switch (indexPath.section) {
@@ -92,11 +92,11 @@
     //        [cell.contentView addSubview:switchBtn];
     //    }
     if (indexPath.section==2){
-        UILabel * subL = [[UILabel alloc] initWithFrame:CGRectMake(ODSScreenWidth-20-15-120, 0, 120, 50)];
+        UILabel * subL = [[UILabel alloc] initWithFrame:CGRectMake(ODSScreenWidth-20-120, 0, 120, 50)];
         subL.backgroundColor = [UIColor clearColor];
         [subL setTextAlignment:NSTextAlignmentRight];
         [subL setTextColor:[UIColor colorWithWhite:180/255.0f alpha:1]];
-        subL.font = [UIFont systemFontOfSize:15];
+        subL.font = [UIFont systemFontOfSize:14];
         [cell.contentView addSubview:subL];
         subL.text = [NSString stringWithFormat:@"%.2fM",20.f];
     }

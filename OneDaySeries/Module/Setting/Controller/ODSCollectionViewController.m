@@ -33,7 +33,7 @@
         [self.contentView addSubview:b];
 
         self.albumView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, myWidth, 2*myWidth/3)];
-        self.albumView.backgroundColor = [UIColor colorWithWhite:200/255.0f alpha:1];
+        self.albumView.backgroundColor = [UIColor colorWithWhite:240/255.0f alpha:1];
         [b addSubview:self.albumView];
         
         
