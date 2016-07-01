@@ -30,7 +30,6 @@
 		061BC9FB1D2637A0004508A1 /* ODSCardScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9FA1D2637A0004508A1 /* ODSCardScrollViewCell.m */; };
 		061BC9FE1D2637AD004508A1 /* ODSCardWebViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9FD1D2637AD004508A1 /* ODSCardWebViewCell.m */; };
 		061BCA001D2639DF004508A1 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 061BC9FF1D2639DF004508A1 /* test.html */; };
-		061BCA031D263BA8004508A1 /* TWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BCA021D263BA8004508A1 /* TWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		061BCA0C1D26492A004508A1 /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BCA0B1D26492A004508A1 /* DMWebView.m */; };
 		062B19E61D2398B200483029 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B19E51D2398B200483029 /* main.m */; };
 		062B19E91D2398B200483029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B19E81D2398B200483029 /* AppDelegate.m */; };
@@ -124,8 +123,6 @@
 		061BC9FC1D2637AD004508A1 /* ODSCardWebViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCardWebViewCell.h; sourceTree = "<group>"; };
 		061BC9FD1D2637AD004508A1 /* ODSCardWebViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSCardWebViewCell.m; sourceTree = "<group>"; };
 		061BC9FF1D2639DF004508A1 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		061BCA011D263BA8004508A1 /* TWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWebView.h; sourceTree = "<group>"; };
-		061BCA021D263BA8004508A1 /* TWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWebView.m; sourceTree = "<group>"; };
 		061BCA0A1D26492A004508A1 /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
 		061BCA0B1D26492A004508A1 /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
 		062B19E11D2398B200483029 /* OneDaySeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneDaySeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -446,8 +443,6 @@
 				061BCA0B1D26492A004508A1 /* DMWebView.m */,
 				062B1A861D23C70800483029 /* ODSAudioPlayView.h */,
 				062B1A871D23C70800483029 /* ODSAudioPlayView.m */,
-				061BCA011D263BA8004508A1 /* TWebView.h */,
-				061BCA021D263BA8004508A1 /* TWebView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -760,7 +755,6 @@
 				062B1A741D23BFEF00483029 /* DOUAudioAnalyzer+Default.m in Sources */,
 				061BC9EF1D260C51004508A1 /* JSONModel+networking.m in Sources */,
 				062B1A881D23C70800483029 /* ODSAudioPlayView.m in Sources */,
-				061BCA031D263BA8004508A1 /* TWebView.m in Sources */,
 				062B1A7C1D23BFEF00483029 /* DOUAudioPlaybackItem.m in Sources */,
 				061BC9C91D2605D1004508A1 /* NSData+YYAdd.m in Sources */,
 				061BC9CC1D2605D1004508A1 /* NSString+YYAdd.m in Sources */,
