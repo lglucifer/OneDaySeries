@@ -92,6 +92,10 @@
 		06CDF7D81D24E91600353D31 /* TimelineList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CDF7D71D24E91500353D31 /* TimelineList.plist */; };
 		D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */; };
 		D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */; };
+		D82FFDF81D26784D00DE078C /* OSDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF71D26784D00DE078C /* OSDWebViewController.m */; };
+		D82FFDFE1D26786A00DE078C /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDFB1D26786A00DE078C /* SGProgressView.m */; };
+		D82FFDFF1D26786A00DE078C /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDFD1D26786A00DE078C /* UINavigationController+SGProgress.m */; };
+		D82FFE021D267AD100DE078C /* ODSVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFE011D267AD100DE078C /* ODSVersionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -273,6 +277,14 @@
 		D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSSettingViewController.m; sourceTree = "<group>"; };
 		D82FFDF21D26660300DE078C /* ODSCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCollectionViewController.h; sourceTree = "<group>"; };
 		D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSCollectionViewController.m; sourceTree = "<group>"; };
+		D82FFDF61D26784D00DE078C /* OSDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDWebViewController.h; sourceTree = "<group>"; };
+		D82FFDF71D26784D00DE078C /* OSDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDWebViewController.m; sourceTree = "<group>"; };
+		D82FFDFA1D26786A00DE078C /* SGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGProgressView.h; sourceTree = "<group>"; };
+		D82FFDFB1D26786A00DE078C /* SGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGProgressView.m; sourceTree = "<group>"; };
+		D82FFDFC1D26786A00DE078C /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
+		D82FFDFD1D26786A00DE078C /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
+		D82FFE001D267AD100DE078C /* ODSVersionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSVersionViewController.h; sourceTree = "<group>"; };
+		D82FFE011D267AD100DE078C /* ODSVersionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSVersionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,6 +509,7 @@
 		062B19FE1D239AAE00483029 /* ThirdSource */ = {
 			isa = PBXGroup;
 			children = (
+				D82FFDF91D26786A00DE078C /* UINavigationController+SGProgress */,
 				061BCA0D1D2666D7004508A1 /* SDWebImage */,
 				061BC9D31D260C51004508A1 /* JSONModel */,
 				062B1A4B1D23BFEF00483029 /* DouAudioStreamer */,
@@ -701,6 +714,10 @@
 				D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */,
 				D82FFDF21D26660300DE078C /* ODSCollectionViewController.h */,
 				D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */,
+				D82FFDF61D26784D00DE078C /* OSDWebViewController.h */,
+				D82FFDF71D26784D00DE078C /* OSDWebViewController.m */,
+				D82FFE001D267AD100DE078C /* ODSVersionViewController.h */,
+				D82FFE011D267AD100DE078C /* ODSVersionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -717,6 +734,17 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D82FFDF91D26786A00DE078C /* UINavigationController+SGProgress */ = {
+			isa = PBXGroup;
+			children = (
+				D82FFDFA1D26786A00DE078C /* SGProgressView.h */,
+				D82FFDFB1D26786A00DE078C /* SGProgressView.m */,
+				D82FFDFC1D26786A00DE078C /* UINavigationController+SGProgress.h */,
+				D82FFDFD1D26786A00DE078C /* UINavigationController+SGProgress.m */,
+			);
+			path = "UINavigationController+SGProgress";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -804,6 +832,7 @@
 				062B1A0C1D239F7C00483029 /* ODSHomeViewController.m in Sources */,
 				061BC9EB1D260C51004508A1 /* JSONModelClassProperty.m in Sources */,
 				062B1A2F1D23A2CB00483029 /* MASViewConstraint.m in Sources */,
+				D82FFDFF1D26786A00DE078C /* UINavigationController+SGProgress.m in Sources */,
 				061BCA3D1D2666D7004508A1 /* UIImageView+WebCache.m in Sources */,
 				061BC9F71D260C93004508A1 /* ODSCardModel.m in Sources */,
 				061BC9EC1D260C51004508A1 /* JSONModelError.m in Sources */,
@@ -835,6 +864,7 @@
 				062B1A301D23A2CB00483029 /* NSArray+MASAdditions.m in Sources */,
 				061BCA3E1D2666D7004508A1 /* UIView+WebCacheOperation.m in Sources */,
 				062B1A331D23A2CB00483029 /* ViewController+MASAdditions.m in Sources */,
+				D82FFDF81D26784D00DE078C /* OSDWebViewController.m in Sources */,
 				062B1A2B1D23A2CB00483029 /* MASConstraint.m in Sources */,
 				061BC9EA1D260C51004508A1 /* JSONModel.m in Sources */,
 				062B1A441D23BD6B00483029 /* ODSAudioCardCell.m in Sources */,
@@ -850,11 +880,13 @@
 				061BCA3B1D2666D7004508A1 /* UIImage+WebP.m in Sources */,
 				062B1A841D23BFEF00483029 /* DOUSimpleHTTPRequest.m in Sources */,
 				061BCA311D2666D7004508A1 /* SDImageCache.m in Sources */,
+				D82FFDFE1D26786A00DE078C /* SGProgressView.m in Sources */,
 				062B1A751D23BFEF00483029 /* DOUAudioAnalyzer.m in Sources */,
 				062B1A811D23BFEF00483029 /* DOUAudioVisualizer.m in Sources */,
 				061BC9FE1D2637AD004508A1 /* ODSCardWebViewCell.m in Sources */,
 				061BCA3C1D2666D7004508A1 /* UIImageView+HighlightedWebCache.m in Sources */,
 				061BC9EE1D260C51004508A1 /* JSONHTTPClient.m in Sources */,
+				D82FFE021D267AD100DE078C /* ODSVersionViewController.m in Sources */,
 				062B1A761D23BFEF00483029 /* DOUAudioDecoder.m in Sources */,
 				061BCA321D2666D7004508A1 /* SDWebImageCompat.m in Sources */,
 				061BCA361D2666D7004508A1 /* SDWebImageManager.m in Sources */,

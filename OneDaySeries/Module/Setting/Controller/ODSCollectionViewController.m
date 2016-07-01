@@ -98,10 +98,6 @@
     static NSString *hCellIdentifier = @"hccell";
     HCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:hCellIdentifier forIndexPath:indexPath];
     [cell.albumView sd_setImageWithURL:[NSURL URLWithString:@"http://i9.topit.me/9/12/af/1108263372db4af129o.jpg"]];
-//    cell.albumView.sd_imageURL = [NSURL URLWithString:@"http://i9.topit.me/9/12/af/1108263372db4af129o.jpg"];
-//    cell.headView.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?imageView2/2/w/50",petalk.petInfo.headImgURL]];
-//    cell.nameL.text = petalk.petInfo.nickname;
-//    cell.timesL.text = [NSString stringWithFormat:@"%@人浏览",petalk.browseNum];
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

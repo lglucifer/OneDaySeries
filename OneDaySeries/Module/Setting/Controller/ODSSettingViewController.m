@@ -8,6 +8,8 @@
 
 #import "ODSSettingViewController.h"
 #import "ODSCollectionViewController.h"
+#import "OSDWebViewController.h"
+#import "ODSVersionViewController.h"
 @interface ODSSettingViewController ()
 @property (nonatomic,strong) UITableView * settingTableV;
 @property (nonatomic,strong) NSArray * titleArray1;
@@ -22,7 +24,7 @@
     self.title = @"设置";
     
     self.titleArray1 = [NSArray arrayWithObjects:@"我的收藏", nil];
-    self.titleArray2 = [NSArray arrayWithObjects:@"晚安吻起源",@"APP版本",@"说点什么", nil];
+    self.titleArray2 = [NSArray arrayWithObjects:@"晚安吻起源",@"版本信息",@"说点什么", nil];
     self.titleArray3 = [NSArray arrayWithObjects:@"清除缓存", nil];
     
     self.settingTableV = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ODSScreenWidth, ODSScreenHeight) style:UITableViewStyleGrouped];
@@ -115,6 +117,26 @@
     if (indexPath.section==0){
         ODSCollectionViewController * collectionV = [[ODSCollectionViewController alloc] init];
         [self.navigationController pushViewController:collectionV animated:YES];
+    }
+    if (indexPath.section==1){
+        if (indexPath.row==0) {
+            OSDWebViewController * webV = [[OSDWebViewController alloc] init];
+            webV.title = @"晚安吻起源";
+            webV.urlStr = @"http://mp.weixin.qq.com/s?__biz=MjM5MDk5Mjc0NA==&mid=208739886&idx=1&sn=45c962dbf0c9721de0a2527efe91360b&3rd=MzA3MDU4NTYzMw==&scene=6#rd";
+            [self.navigationController pushViewController:webV animated:YES];
+        }
+        else if (indexPath.row==1){
+            ODSVersionViewController * versionV = [[ODSVersionViewController alloc] init];
+            [self.navigationController pushViewController:versionV animated:YES];
+        }
+        else if(indexPath.row==2){
+            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/tian-tian-cheng-yu/id843601091?ls=1&mt=8"];
+            if([[UIApplication sharedApplication] canOpenURL:url])
+            {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }
+        
     }
 }
 
