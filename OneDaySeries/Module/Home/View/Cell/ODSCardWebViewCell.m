@@ -33,11 +33,6 @@
     self.operationView = operationView;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    self.webView.bounds = self.bounds;
-}
-
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     self.operationView.hidden = YES;
 }

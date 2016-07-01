@@ -19,6 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.operationView.hideSepLine = NO;
+        [self loadHtml];
     }
     return self;
 }
@@ -29,11 +30,14 @@
         return;
     }
     self.textCardModel = data;
+//    dispatch_async(dispatch_queue_create(NULL, NULL), ^{
+//    });
+}
+
+- (void)loadHtml {
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"test" ofType:@"html"];
     NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    dispatch_async(dispatch_queue_create(NULL, NULL), ^{
-       [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:filePath]]; 
-    });
+    [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:filePath]];
 }
 
 @end

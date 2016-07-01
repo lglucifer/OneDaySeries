@@ -10,4 +10,6 @@
 
 @interface ODSTextCardCell : ODSCardWebViewCell
 
+- (void)loadHtml;
+
 @end
