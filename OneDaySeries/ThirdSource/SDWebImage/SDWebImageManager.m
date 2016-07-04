@@ -63,7 +63,7 @@
     } else {
         if (NSClassFromString(@"NSURLComponents") && [NSURLComponents instancesRespondToSelector:@selector(string)]) {
             NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:url resolvingAgainstBaseURL:NO];
-            urlComponents.query = nil; // Strip out query parameters.
+//            urlComponents.query = nil; // Strip out query parameters.
             return [urlComponents.URL absoluteString];
         } else {
             return [url absoluteString];
@@ -155,7 +155,7 @@
     @synchronized (self.runningOperations) {
         [self.runningOperations addObject:operation];
     }
-    NSString *key = [self cacheKeyForURL:url];
+    NSString *key = [self cacheKeyForURL:url];//return [urlComponents.URL absoluteString]
 
     operation.cacheOperation = [self.imageCache queryDiskCacheForKey:key done:^(UIImage *image, SDImageCacheType cacheType) {
         if (operation.isCancelled) {
