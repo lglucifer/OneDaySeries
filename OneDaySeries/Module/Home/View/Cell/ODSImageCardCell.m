@@ -54,7 +54,7 @@
         }];
         
         UIImageView *thumbImageV = [[UIImageView alloc] init];
-        thumbImageV.backgroundColor = [UIColor redColor];
+        thumbImageV.userInteractionEnabled = YES;
         [self.scrollView addSubview:thumbImageV];
         self.thumbImageV = thumbImageV;
         
@@ -79,6 +79,9 @@
             make.height.mas_equalTo(30);
         }];
         self.operationView.hideSepLine = NO;
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(inner_ShowBigImage:)];
+        [self.thumbImageV addGestureRecognizer:tapGesture];
     }
     return self;
 }
@@ -88,7 +91,7 @@
         return;
     }
     self.imageCardModel = data;
-    self.thumbImageV.image = [UIImage imageNamed:self.imageCardModel.thumbImageURLString];
+    [self.thumbImageV sd_setImageWithURL:[NSURL URLWithString:self.imageCardModel.thumbImageURLString]];
     if (self.imageCardModel.layoutType == ODSImageCardLayout_Horizontal) {
         CGFloat titleLbTopOffset = 60;
         CGFloat thumbTopOffset = 50;
@@ -126,6 +129,10 @@
             make.top.mas_equalTo(self.thumbImageV.mas_bottom).mas_offset(10);
         }];
     }
+}
+
+- (void)inner_ShowBigImage:(UITapGestureRecognizer *)tap {
+    [self.imageCardDelegate imageCardSelectImage:self.imageCardModel.bigImageURLString];
 }
 
 - (void)inner_ShowImageText:(UIButton *)sender {

@@ -33,9 +33,13 @@ typedef NS_ENUM(NSUInteger, ODSCardMediaType) {
 
 @property (nonatomic, copy) NSString *thumbImageURLString;
 
+@property (nonatomic, copy) NSString *bigImageURLString;
+
 @property (nonatomic, assign) CGFloat width;
 
 @property (nonatomic, assign) CGFloat height;
+
+@property (nonatomic, assign) CGFloat radio;
 
 @property (nonatomic, assign) ODSImageCardLayoutType layoutType;
 

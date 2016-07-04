@@ -8,6 +8,15 @@
 
 #import "ODSCardScrollViewCell.h"
 
+@class ODSImageCardCell;
+@protocol ODSImageCardDelegate <NSObject>
+
+- (void)imageCardSelectImage:(NSString *)bigImageURLString;
+
+@end
+
 @interface ODSImageCardCell : ODSCardScrollViewCell
+
+@property (nonatomic, weak) id<ODSImageCardDelegate> imageCardDelegate;
 
 @end

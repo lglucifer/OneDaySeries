@@ -14,8 +14,9 @@
 #import "ODSImageCardCell.h"
 #import "ODSNavigationController.h"
 #import "ODSSettingViewController.h"
+#import "ACImageBrowser.h"
 
-@interface ODSHomeViewController()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ODSHomeViewController()<UICollectionViewDelegate, UICollectionViewDataSource, ODSImageCardDelegate, ACImageBrowserDelegate>
 
 @property (nonatomic, weak) UICollectionView *collectionView;
 
@@ -78,16 +79,16 @@
                 ODSImageCardModel *imageCardModel = [[ODSImageCardModel alloc] init];
                 imageCardModel.mediaType = ODSCardMediaType_Image;
                 if (i % 2 == 0) {
-                    UIImage *image = [UIImage imageNamed:@"horizontal_image"];
-                    imageCardModel.width = image.size.width;
-                    imageCardModel.height = image.size.height;
-                    imageCardModel.thumbImageURLString = @"horizontal_image";
+                    imageCardModel.width = 457;
+                    imageCardModel.height = 343;
+                    imageCardModel.thumbImageURLString = @"http://xlimage.uzero.cn/dacfd675c59f9c9bc5021f84e64d5ff7.jpg?imageView2/2/h/200";
+                    imageCardModel.bigImageURLString = @"http://xlimage.uzero.cn/dacfd675c59f9c9bc5021f84e64d5ff7.jpg";
                     imageCardModel.layoutType = ODSImageCardLayout_Horizontal;
                 } else {
-                    UIImage *image = [UIImage imageNamed:@"vertical_image"];
-                    imageCardModel.width = image.size.width;
-                    imageCardModel.height = image.size.height;
-                    imageCardModel.thumbImageURLString = @"vertical_image";
+                    imageCardModel.width = 242;
+                    imageCardModel.height = 343;
+                    imageCardModel.thumbImageURLString = @"http://xlimage.uzero.cn/91Npeew9NqL.jpg?imageView2/2/h/200";
+                    imageCardModel.bigImageURLString = @"http://xlimage.uzero.cn/91Npeew9NqL.jpg";
                     imageCardModel.layoutType = ODSImageCardLayout_Vertical;
                 }
                 [asyncItems addObject:imageCardModel];
@@ -110,6 +111,7 @@
     ODSTextCardCell *textCardCell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(ODSTextCardCell.class) forIndexPath:indexPath];
     ODSCardModel *cardModel = self.items[indexPath.row];
     if (cardModel.mediaType == ODSCardMediaType_Image) {
+        imageCardCell.imageCardDelegate = self;
         [imageCardCell loadData:cardModel];
         return imageCardCell;
     } else if (cardModel.mediaType == ODSCardMediaType_Audio) {
@@ -141,7 +143,23 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:scrollView.contentOffset];
     UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-    
+}
+
+#pragma mark -- 
+
+- (void)imageCardSelectImage:(NSString *)bigImageURLString {
+    NSMutableArray *images = [NSMutableArray arrayWithObject:[NSURL URLWithString:bigImageURLString]];
+    ACImageBrowser *browser = [[ACImageBrowser alloc] initWithImagesURLArray:images];
+    browser.delegate = self;
+    [browser setPageIndex:0];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:browser];
+    nc.navigationBarHidden = YES;
+    nc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:nc animated:YES completion:nil];
+}
+
+- (void)dismissAtIndex:(NSInteger)index {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
