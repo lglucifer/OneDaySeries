@@ -90,7 +90,6 @@
     self.imageCardModel = data;
     self.thumbImageV.image = [UIImage imageNamed:self.imageCardModel.thumbImageURLString];
     if (self.imageCardModel.layoutType == ODSImageCardLayout_Horizontal) {
-        BOOL iPhone4 = [UIScreen mainScreen].bounds.size.height <= 480 ? YES : NO;
         CGFloat titleLbTopOffset = 60;
         CGFloat thumbTopOffset = 50;
         CGFloat operationTopOffset = 50;

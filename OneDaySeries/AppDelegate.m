@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ODSNavigationController.h"
 #import "ODSHomeViewController.h"
+#import "ODSDouAudioStreamerManager.h"
 
 @interface AppDelegate ()
 
@@ -30,11 +31,6 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
@@ -45,6 +41,38 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark -- Background Audio
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlPlay:
+                [[ODSDouAudioStreamerManager sharedManager].streamer play];
+                break;
+            case UIEventSubtypeRemoteControlPause:
+                [[ODSDouAudioStreamerManager sharedManager].streamer pause];
+                break;
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 @end

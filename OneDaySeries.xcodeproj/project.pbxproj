@@ -89,7 +89,9 @@
 		062B1A841D23BFEF00483029 /* DOUSimpleHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B1A711D23BFEF00483029 /* DOUSimpleHTTPRequest.m */; };
 		062B1A851D23BFEF00483029 /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B1A731D23BFEF00483029 /* NSData+DOUMappedFile.m */; };
 		062B1A881D23C70800483029 /* ODSAudioPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B1A871D23C70800483029 /* ODSAudioPlayView.m */; };
-		06CDF7D81D24E91600353D31 /* TimelineList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CDF7D71D24E91500353D31 /* TimelineList.plist */; };
+		0663E9561D29FC3200BA583E /* ODSTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0663E9551D29FC3200BA583E /* ODSTrack.m */; };
+		0663E9591D2A084F00BA583E /* ODSDouAudioStreamerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0663E9581D2A084F00BA583E /* ODSDouAudioStreamerManager.m */; };
+		0663E95B1D2A0B8800BA583E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0663E95A1D2A0B8800BA583E /* MediaPlayer.framework */; };
 		D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */; };
 		D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */; };
 /* End PBXBuildFile section */
@@ -268,7 +270,11 @@
 		062B1A731D23BFEF00483029 /* NSData+DOUMappedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DOUMappedFile.m"; sourceTree = "<group>"; };
 		062B1A861D23C70800483029 /* ODSAudioPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSAudioPlayView.h; sourceTree = "<group>"; };
 		062B1A871D23C70800483029 /* ODSAudioPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSAudioPlayView.m; sourceTree = "<group>"; };
-		06CDF7D71D24E91500353D31 /* TimelineList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimelineList.plist; sourceTree = "<group>"; };
+		0663E9541D29FC3200BA583E /* ODSTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSTrack.h; sourceTree = "<group>"; };
+		0663E9551D29FC3200BA583E /* ODSTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSTrack.m; sourceTree = "<group>"; };
+		0663E9571D2A084F00BA583E /* ODSDouAudioStreamerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSDouAudioStreamerManager.h; sourceTree = "<group>"; };
+		0663E9581D2A084F00BA583E /* ODSDouAudioStreamerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSDouAudioStreamerManager.m; sourceTree = "<group>"; };
+		0663E95A1D2A0B8800BA583E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D82FFDEF1D2657A300DE078C /* ODSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSSettingViewController.h; sourceTree = "<group>"; };
 		D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSSettingViewController.m; sourceTree = "<group>"; };
 		D82FFDF21D26660300DE078C /* ODSCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCollectionViewController.h; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0663E95B1D2A0B8800BA583E /* MediaPlayer.framework in Frameworks */,
 				061BC9D21D260611004508A1 /* libz.1.2.5.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				061BC9D11D260611004508A1 /* libz.1.2.5.tbd */,
+				0663E95A1D2A0B8800BA583E /* MediaPlayer.framework */,
 			);
 			name = AppleFramework;
 			sourceTree = "<group>";
@@ -456,7 +464,6 @@
 				062B19F21D2398B200483029 /* LaunchScreen.storyboard */,
 				062B19F51D2398B200483029 /* Info.plist */,
 				062B19E41D2398B200483029 /* Supporting Files */,
-				06CDF7D71D24E91500353D31 /* TimelineList.plist */,
 			);
 			path = OneDaySeries;
 			sourceTree = "<group>";
@@ -520,6 +527,8 @@
 			children = (
 				061BC9F51D260C93004508A1 /* ODSCardModel.h */,
 				061BC9F61D260C93004508A1 /* ODSCardModel.m */,
+				0663E9541D29FC3200BA583E /* ODSTrack.h */,
+				0663E9551D29FC3200BA583E /* ODSTrack.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -536,6 +545,8 @@
 				061BCA0B1D26492A004508A1 /* DMWebView.m */,
 				062B1A861D23C70800483029 /* ODSAudioPlayView.h */,
 				062B1A871D23C70800483029 /* ODSAudioPlayView.m */,
+				0663E9571D2A084F00BA583E /* ODSDouAudioStreamerManager.h */,
+				0663E9581D2A084F00BA583E /* ODSDouAudioStreamerManager.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -750,7 +761,7 @@
 				TargetAttributes = {
 					062B19E01D2398B200483029 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4225KQ7WC5;
+						DevelopmentTeam = EZLLRAF9ES;
 					};
 				};
 			};
@@ -781,7 +792,6 @@
 				062B19F41D2398B200483029 /* LaunchScreen.storyboard in Resources */,
 				062B19F11D2398B200483029 /* Assets.xcassets in Resources */,
 				061BCA001D2639DF004508A1 /* test.html in Resources */,
-				06CDF7D81D24E91600353D31 /* TimelineList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +802,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0663E9561D29FC3200BA583E /* ODSTrack.m in Sources */,
 				D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */,
 				062B1A4A1D23BD8500483029 /* ODSTextCardCell.m in Sources */,
 				062B1A311D23A2CB00483029 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -802,6 +813,7 @@
 				061BC9D01D2605D1004508A1 /* UIImageView+Animation.m in Sources */,
 				061BCA391D2666D7004508A1 /* UIImage+GIF.m in Sources */,
 				062B1A0C1D239F7C00483029 /* ODSHomeViewController.m in Sources */,
+				0663E9591D2A084F00BA583E /* ODSDouAudioStreamerManager.m in Sources */,
 				061BC9EB1D260C51004508A1 /* JSONModelClassProperty.m in Sources */,
 				062B1A2F1D23A2CB00483029 /* MASViewConstraint.m in Sources */,
 				061BCA3D1D2666D7004508A1 /* UIImageView+WebCache.m in Sources */,
@@ -979,7 +991,7 @@
 				GCC_PREFIX_HEADER = OneDaySeries/OneDaySeries.pch;
 				INFOPLIST_FILE = OneDaySeries/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.uzero.OneDaySeries;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.uzero.VideoFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -994,7 +1006,7 @@
 				GCC_PREFIX_HEADER = OneDaySeries/OneDaySeries.pch;
 				INFOPLIST_FILE = OneDaySeries/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.uzero.OneDaySeries;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.uzero.VideoFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
