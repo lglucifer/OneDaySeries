@@ -104,6 +104,19 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
             make.top.mas_equalTo(titleLb.mas_bottom).mas_offset(10);
             make.width.mas_equalTo(200);
         }];
+        
+        CABasicAnimation* rotationAnimation;
+        rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+        rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
+        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        rotationAnimation.duration = 15;
+        rotationAnimation.repeatCount = MAXFLOAT;//你可以设置到最大的整数值
+        rotationAnimation.cumulative = NO;
+        rotationAnimation.removedOnCompletion = NO;
+        rotationAnimation.fillMode = kCAFillModeForwards;
+        [self.albumImageV.layer addAnimation:rotationAnimation forKey:@"Rotation"];
+        self.albumImageV.layer.speed = 0.0;
+        self.albumImageV.layer.timeOffset = 0;
     }
     return self;
 }
@@ -222,21 +235,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     switch ([_streamer status]) {
         case DOUAudioStreamerPlaying:
             [self.playBtn setImage:[UIImage imageNamed:@"Music_Stop_Btn"] forState:UIControlStateNormal];
-            if (!_layerContainsAnimation) {
-                _layerContainsAnimation = YES;
-                CABasicAnimation* rotationAnimation;
-                rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-                rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
-                [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-                rotationAnimation.duration = 15;
-                rotationAnimation.repeatCount = MAXFLOAT;//你可以设置到最大的整数值
-                rotationAnimation.cumulative = NO;
-                rotationAnimation.removedOnCompletion = NO;
-                rotationAnimation.fillMode = kCAFillModeForwards;
-                [self.albumImageV.layer addAnimation:rotationAnimation forKey:@"Rotation"];
-            } else {
-                [self resumeAlbumRotation];
-            }
+            [self resumeAlbumRotation];
             break;
             
         case DOUAudioStreamerPaused:
