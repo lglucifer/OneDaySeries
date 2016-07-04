@@ -17,6 +17,13 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #define ODSScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define ODSScreenHeight  [UIScreen mainScreen].bounds.size.height
 #define iPhone4         ([UIScreen mainScreen].bounds.size.height <= 480 ? YES : NO)
+
+#define CurrentVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey]
+
+#define CurrentAPPName [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey]
+
+#define ContactMail @"suggestion@uzero.cn"
 
 #endif /* OneDaySeries_pch */
