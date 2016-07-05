@@ -51,4 +51,12 @@
     return [self card_webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
 }
 
+- (void)card_webViewDidFinishLoad:(UIWebView *)webView {
+    
+}
+
+- (BOOL)card_webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return YES;
+}
+
 @end

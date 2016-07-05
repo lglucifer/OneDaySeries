@@ -8,11 +8,11 @@
 
 #import "ODSHomeViewController.h"
 #import "ODSSettingViewController.h"
-#import "PQFBouncingBalls.h"
+#import "FeSpinnerTenDot.h"
 
-@interface ODSHomeViewController()
+@interface ODSHomeViewController()<FeSpinnerTenDotDelegate>
 
-@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
+@property (nonatomic, strong) FeSpinnerTenDot *spinner;
 
 @end
 
@@ -31,6 +31,13 @@
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:self action:@selector(inner_PushSetting:)];
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    self.collectionView.hidden = YES;
+    
+    _spinner = [[FeSpinnerTenDot alloc] initWithView:self.view withBlur:NO];
+    _spinner.delegate = self;
+    [self.view addSubview:_spinner];
+    [_spinner show];
     
     dispatch_async(dispatch_queue_create(NULL, NULL), ^{
         NSMutableArray *asyncItems = [[NSMutableArray alloc] initWithCapacity:100];
@@ -68,19 +75,17 @@
         }
         self.items = asyncItems.copy;
         dispatch_async(dispatch_get_main_queue(), ^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.bouncingBalls removeLoader];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [_spinner dismiss];
                 self.collectionView.hidden = NO;
                 [self.collectionView reloadData];
             });
         });
     });
-    self.bouncingBalls = [PQFBouncingBalls createLoaderOnView:self.view];
-    self.bouncingBalls.jumpAmount = 50;
-    self.bouncingBalls.zoomAmount = 20;
-    self.bouncingBalls.separation = 20;
-    self.collectionView.hidden = YES;
-    [self.bouncingBalls showLoader];
+}
+
+- (void)FeSpinnerTenDotDidDismiss:(FeSpinnerTenDot *)sender {
+    NSLog(@"did dismiss");
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
