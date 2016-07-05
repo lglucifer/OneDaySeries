@@ -90,7 +90,7 @@
 {
     // init frame as bound container
     CGRect frame = _containerView.bounds;
-    frame.size.height -= 64;
+    frame.size.height -= 130;
     self.frame = frame;
     
     // init Background
@@ -118,7 +118,7 @@
     else
     {
         _backgroundStatic = [[UIView alloc] initWithFrame:_containerView.bounds];
-        _backgroundStatic.backgroundColor = [UIColor colorWithHexCode:@"#03225C"];
+        _backgroundStatic.backgroundColor = [UIColor clearColor];
     }
 
 }
@@ -130,7 +130,8 @@
     UIView *centerDot = [[UIView alloc] initWithFrame:CGRectMake(center.x, center.y, 20, 20)];
     centerDot.clipsToBounds = YES;
     centerDot.layer.cornerRadius = centerDot.bounds.size.height /2;
-    centerDot.backgroundColor = [UIColor whiteColor];
+    centerDot.backgroundColor = [UIColor colorWithRGB:0x6e84b1];
+    centerDot.alpha = 0.6;
     centerDot.center = center;
     
     [self addSubview:centerDot];
@@ -149,7 +150,7 @@
 {
     // init Label
     _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-    _label.textColor = [UIColor whiteColor];
+    _label.textColor = [UIColor colorWithRGB:0x6e84b1];
     _label.text = _titleLabelText;
     _label.textAlignment = NSTextAlignmentCenter;
     

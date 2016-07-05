@@ -45,7 +45,8 @@
     if (self)
     {
         // Deafault
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor colorWithRGB:0x6e84b1];
+        self.alpha = 0.6;
         self.layer.cornerRadius = self.bounds.size.width / 2;
         self.clipsToBounds = YES;
         _isAnimating = NO;

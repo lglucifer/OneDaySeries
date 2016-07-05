@@ -38,6 +38,10 @@
     _spinner.delegate = self;
     [self.view addSubview:_spinner];
     [_spinner show];
+    CGAffineTransform newTransform =
+    CGAffineTransformScale(_spinner.transform, 0.6, 0.6);
+    [_spinner setTransform:newTransform];
+
     
     dispatch_async(dispatch_queue_create(NULL, NULL), ^{
         NSMutableArray *asyncItems = [[NSMutableArray alloc] initWithCapacity:100];
