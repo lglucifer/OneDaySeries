@@ -18,18 +18,25 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        UIView *containerView = [[UIView alloc] init];
+        containerView.backgroundColor = [UIColor colorWithWhite:0.f alpha:.8];
+        [self addSubview:containerView];
+        
+        [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_centerY).mas_offset(0);
+            make.left.bottom.right.mas_equalTo(self).mas_offset(0);
+        }];
+        
         UITextView *textView = [[UITextView alloc] init];
-        textView.backgroundColor = [UIColor colorWithWhite:0.f alpha:.8];
+        textView.backgroundColor = [UIColor clearColor];
         textView.textColor = [UIColor whiteColor];
         textView.editable = NO;
         textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
-        [self addSubview:textView];
+        [containerView addSubview:textView];
         self.textView = textView;
         
         [textView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.mas_centerY).mas_offset(0);
-            make.left.bottom.right.mas_equalTo(self).mas_offset(0);
-//            make.bottom.right.mas_equalTo(self).mas_offset(-10);
+            make.edges.mas_equalTo(containerView).insets(UIEdgeInsetsMake(10, 0, 10, 0));
         }];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];

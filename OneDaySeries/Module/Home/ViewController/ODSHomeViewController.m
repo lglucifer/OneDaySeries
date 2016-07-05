@@ -8,8 +8,11 @@
 
 #import "ODSHomeViewController.h"
 #import "ODSSettingViewController.h"
+#import "PQFBouncingBalls.h"
 
 @interface ODSHomeViewController()
+
+@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
 
 @end
 
@@ -65,9 +68,19 @@
         }
         self.items = asyncItems.copy;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.bouncingBalls removeLoader];
+                self.collectionView.hidden = NO;
+                [self.collectionView reloadData];
+            });
         });
     });
+    self.bouncingBalls = [PQFBouncingBalls createLoaderOnView:self.view];
+    self.bouncingBalls.jumpAmount = 50;
+    self.bouncingBalls.zoomAmount = 20;
+    self.bouncingBalls.separation = 20;
+    self.collectionView.hidden = YES;
+    [self.bouncingBalls showLoader];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

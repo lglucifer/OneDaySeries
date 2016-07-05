@@ -14,6 +14,7 @@
 #import "ODSNavigationController.h"
 #import "ACImageBrowser.h"
 #import "ODSImageInfoView.h"
+#import "XZMRefresh.h"
 
 @interface ODSBaseCollectionViewController()<ODSCardDelegate, ACImageBrowserDelegate>
 
@@ -22,6 +23,10 @@
 @end
 
 @implementation ODSBaseCollectionViewController
+
+- (void)inner_Refresh:(id)sender {
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,11 +39,16 @@
     collectionView.dataSource = self;
     collectionView.pagingEnabled = YES;
     collectionView.showsHorizontalScrollIndicator = NO;
+    collectionView.alwaysBounceHorizontal = YES;
     collectionView.backgroundColor = [UIColor clearColor];
     
     [collectionView registerClass:[ODSAudioCardCell class] forCellWithReuseIdentifier:NSStringFromClass(ODSAudioCardCell.class)];
     [collectionView registerClass:[ODSImageCardCell class] forCellWithReuseIdentifier:NSStringFromClass(ODSImageCardCell.class)];
     [collectionView registerClass:[ODSTextCardCell class] forCellWithReuseIdentifier:NSStringFromClass(ODSTextCardCell.class)];
+    
+//    collectionView.xzm_gifHeader = [[XZMRefreshGifHeader header] setRefreshingTarget:self refreshingAction:@selector(inner_Refresh:)];
+   
+    [collectionView xzm_addNormalHeaderWithTarget:self action:@selector(inner_Refresh:)];
     
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
@@ -56,6 +66,8 @@
         make.top.mas_equalTo(self.view).mas_offset(CGRectGetHeight(self.view.frame));
         make.height.mas_equalTo(self.view.mas_height);
     }];
+    
+    [collectionView.xzm_header beginRefreshing];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,7 +96,7 @@
 #pragma mark --
 
 - (void)imageCardShowImageInfo:(NSString *)imageInfo {
-    self.imageInfoView.imageInfo = @"我喜欢创造新的三维世界，提出一些有悖于 “常理” 的东西。大家都太迷信 “常理” 了，但我总觉得一切可以大有不同，始终在寻找那些看不见的东西。为了拍摄那组沙漠的照片，我驱车驶入了摩洛哥的无人区。那里的空旷和浩淼是如此迷人，很难想象曾是一片汪洋，地能喷薄欲出。于是我就在想，这里再过几个世纪后又会变成怎样的场景呢？就像如果给你看两百年前纽约的照片，你肯定也会认为那是幻境。\n卡上就打开撒开了的就撒旦了卡三等奖拉萨的哈哈阿里肯德基的。";
+    self.imageInfoView.imageInfo = @"我喜欢创造新的三维世界，提出一些有悖于 “常理” 的东西。大家都太迷信 “常理” 了，但我总觉得一切可以大有不同，始终在寻找那些看不见的东西。为了拍摄那组沙漠的照片，我驱车驶入了摩洛哥的无人区。那里的空旷和浩淼是如此迷人，很难想象曾是一片汪洋，地能喷薄欲出。于是我就在想，这里再过几个世纪后又会变成怎样的场景呢？就像如果给你看两百年前纽约的照片，你肯定也会认为那是幻境。\n卡上就打开撒开了的就撒旦了卡三等奖拉萨的哈哈阿里肯德基的。我喜欢创造新的三维世界，提出一些有悖于 “常理” 的东西。大家都太迷信 “常理” 了，但我总觉得一切可以大有不同，始终在寻找那些看不见的东西。为了拍摄那组沙漠的照片，我驱车驶入了摩洛哥的无人区。那里的空旷和浩淼是如此迷人，很难想象曾是一片汪洋，地能喷薄欲出。于是我就在想，这里再过几个世纪后又会变成怎样的场景呢？就像如果给你看两百年前纽约的照片，你肯定也会认为那是幻境。\n卡上就打开撒开了的就撒旦了卡三等奖拉萨的哈哈阿里肯德基的。我喜欢创造新的三维世界，提出一些有悖于 “常理” 的东西。大家都太迷信 “常理” 了，但我总觉得一切可以大有不同，始终在寻找那些看不见的东西。为了拍摄那组沙漠的照片，我驱车驶入了摩洛哥的无人区。那里的空旷和浩淼是如此迷人，很难想象曾是一片汪洋，地能喷薄欲出。于是我就在想，这里再过几个世纪后又会变成怎样的场景呢？就像如果给你看两百年前纽约的照片，你肯定也会认为那是幻境。\n卡上就打开撒开了的就撒旦了卡三等奖拉萨的哈哈阿里肯德基的。";
     [self.imageInfoView show];
 }
 
