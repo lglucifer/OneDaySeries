@@ -6,8 +6,8 @@
 //  Copyright © 2016年 cn.com.uzero. All rights reserved.
 //
 
-#import "ODSBaseViewController.h"
+#import "ODSBaseCollectionViewController.h"
 
-@interface ODSHomeViewController : ODSBaseViewController
+@interface ODSHomeViewController : ODSBaseCollectionViewController
 
 @end

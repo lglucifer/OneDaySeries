@@ -1,41 +1,27 @@
 //
-//  ODSHomeViewController.m
+//  ODSFavoriteContainerViewController.m
 //  OneDaySeries
 //
-//  Created by LiuXiaoyu on 16/6/29.
+//  Created by LiuXiaoyu on 16/7/5.
 //  Copyright © 2016年 cn.com.uzero. All rights reserved.
 //
 
-#import "ODSHomeViewController.h"
-#import "ODSSettingViewController.h"
+#import "ODSFavoriteContainerViewController.h"
 
-@interface ODSHomeViewController()
+@implementation ODSFavoriteContainerViewController
 
-@end
-
-@implementation ODSHomeViewController
-
-- (void)inner_PushSetting:(UIBarButtonItem *)sender {
-    ODSSettingViewController * setv = [[ODSSettingViewController alloc] init];
-    [self.navigationController pushViewController:setv animated:YES];
+- (NSString *)title {
+    return @"我的收藏";
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    UIImage *image = [UIImage imageNamed:@"chaifei_menu"];
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:self action:@selector(inner_PushSetting:)];
-    self.navigationItem.rightBarButtonItem = rightItem;
-    
+
     dispatch_async(dispatch_queue_create(NULL, NULL), ^{
         NSMutableArray *asyncItems = [[NSMutableArray alloc] initWithCapacity:100];
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1; i++) {
             NSInteger mediaType = arc4random() % 3;
-            if (i == 0) {
-                mediaType = 0;
-            }
             if (mediaType == 0) {
                 ODSAudioCardModel *audioCardModel = [[ODSAudioCardModel alloc] init];
                 audioCardModel.mediaType = ODSCardMediaType_Audio;

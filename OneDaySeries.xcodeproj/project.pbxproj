@@ -12,6 +12,8 @@
 		0609D5F41D2B45E80081798D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5F11D2B45E80081798D /* XPathQuery.m */; };
 		0609D5F81D2B48FF0081798D /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0609D5F71D2B48FF0081798D /* libxml2.2.tbd */; };
 		0609D5FC1D2B4F1C0081798D /* ODSImageInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5FB1D2B4F1C0081798D /* ODSImageInfoView.m */; };
+		0609D5FF1D2B5BAA0081798D /* ODSBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5FE1D2B5BAA0081798D /* ODSBaseCollectionViewController.m */; };
+		0609D6021D2B5D3F0081798D /* ODSFavoriteContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D6011D2B5D3F0081798D /* ODSFavoriteContainerViewController.m */; };
 		061BC9C91D2605D1004508A1 /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B21D2605D1004508A1 /* NSData+YYAdd.m */; };
 		061BC9CA1D2605D1004508A1 /* NSDate+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B41D2605D1004508A1 /* NSDate+YYAdd.m */; };
 		061BC9CB1D2605D1004508A1 /* NSNumber+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B61D2605D1004508A1 /* NSNumber+YYAdd.m */; };
@@ -126,6 +128,10 @@
 		0609D5F91D2B4B590081798D /* ODSCardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCardDelegate.h; sourceTree = "<group>"; };
 		0609D5FA1D2B4F1C0081798D /* ODSImageInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSImageInfoView.h; sourceTree = "<group>"; };
 		0609D5FB1D2B4F1C0081798D /* ODSImageInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSImageInfoView.m; sourceTree = "<group>"; };
+		0609D5FD1D2B5BAA0081798D /* ODSBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSBaseCollectionViewController.h; sourceTree = "<group>"; };
+		0609D5FE1D2B5BAA0081798D /* ODSBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSBaseCollectionViewController.m; sourceTree = "<group>"; };
+		0609D6001D2B5D3F0081798D /* ODSFavoriteContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSFavoriteContainerViewController.h; sourceTree = "<group>"; };
+		0609D6011D2B5D3F0081798D /* ODSFavoriteContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSFavoriteContainerViewController.m; sourceTree = "<group>"; };
 		061BC9B11D2605D1004508A1 /* NSData+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YYAdd.h"; sourceTree = "<group>"; };
 		061BC9B21D2605D1004508A1 /* NSData+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YYAdd.m"; sourceTree = "<group>"; };
 		061BC9B31D2605D1004508A1 /* NSDate+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YYAdd.h"; sourceTree = "<group>"; };
@@ -633,6 +639,10 @@
 			children = (
 				062B1A0A1D239F7C00483029 /* ODSHomeViewController.h */,
 				062B1A0B1D239F7C00483029 /* ODSHomeViewController.m */,
+				0609D5FD1D2B5BAA0081798D /* ODSBaseCollectionViewController.h */,
+				0609D5FE1D2B5BAA0081798D /* ODSBaseCollectionViewController.m */,
+				0609D6001D2B5D3F0081798D /* ODSFavoriteContainerViewController.h */,
+				0609D6011D2B5D3F0081798D /* ODSFavoriteContainerViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -955,6 +965,7 @@
 				062B1A781D23BFEF00483029 /* DOUAudioFilePreprocessor.m in Sources */,
 				061BC9D01D2605D1004508A1 /* UIImageView+Animation.m in Sources */,
 				061BCA391D2666D7004508A1 /* UIImage+GIF.m in Sources */,
+				0609D5FF1D2B5BAA0081798D /* ODSBaseCollectionViewController.m in Sources */,
 				062B1A0C1D239F7C00483029 /* ODSHomeViewController.m in Sources */,
 				0663E9591D2A084F00BA583E /* ODSDouAudioStreamerManager.m in Sources */,
 				061BC9EB1D260C51004508A1 /* JSONModelClassProperty.m in Sources */,
@@ -1005,6 +1016,7 @@
 				061BC9CA1D2605D1004508A1 /* NSDate+YYAdd.m in Sources */,
 				062B1A3D1D23BCA400483029 /* ODSMoreOperationView.m in Sources */,
 				062B1A7D1D23BFEF00483029 /* DOUAudioRenderer.m in Sources */,
+				0609D6021D2B5D3F0081798D /* ODSFavoriteContainerViewController.m in Sources */,
 				062B1A7F1D23BFEF00483029 /* DOUAudioStreamer+Options.m in Sources */,
 				0609D5FC1D2B4F1C0081798D /* ODSImageInfoView.m in Sources */,
 				062B1A7A1D23BFEF00483029 /* DOUAudioFrequencyAnalyzer.m in Sources */,

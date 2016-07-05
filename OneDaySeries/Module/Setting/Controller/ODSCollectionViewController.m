@@ -8,6 +8,8 @@
 
 #import "ODSCollectionViewController.h"
 #import "UIImageView+WebCache.h"
+#import "ODSFavoriteContainerViewController.h"
+
 @interface HCell : UICollectionViewCell
 @property (nonatomic,retain)UIImageView * albumView;
 @property (nonatomic,retain)UILabel * desL;
@@ -102,7 +104,8 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ODSFavoriteContainerViewController *containerVC = [[ODSFavoriteContainerViewController alloc] init];
+    [self.navigationController pushViewController:containerVC animated:YES];
 }
 
 -(void)scrollViewWillBeginDragging:(nonnull UIScrollView *)scrollView
