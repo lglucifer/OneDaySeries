@@ -19,7 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         UITextView *textView = [[UITextView alloc] init];
-        textView.backgroundColor = [UIColor colorWithWhite:0.f alpha:.5];
+        textView.backgroundColor = [UIColor colorWithWhite:0.f alpha:.8];
         textView.textColor = [UIColor whiteColor];
         textView.editable = NO;
         textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -42,8 +42,8 @@
     _imageInfo = imageInfo;
     self.textView.text = imageInfo;
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    style.lineSpacing = 3.f;
-    style.firstLineHeadIndent = 10.f;
+    style.lineSpacing = 6.f;
+    style.firstLineHeadIndent = 0.f;
     self.textView.attributedText = [[NSAttributedString alloc] initWithString:imageInfo attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.f], NSForegroundColorAttributeName: [UIColor whiteColor], NSParagraphStyleAttributeName: style}];
 }
 
