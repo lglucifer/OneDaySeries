@@ -12,4 +12,6 @@
 
 - (void)imageCardSelectImage:(NSArray *)images index:(NSInteger)index;
 
+- (void)imageCardShowImageInfo:(NSString *)imageInfo;
+
 @end

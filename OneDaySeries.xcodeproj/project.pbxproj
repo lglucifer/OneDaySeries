@@ -11,6 +11,7 @@
 		0609D5F31D2B45E80081798D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5EF1D2B45E80081798D /* TFHppleElement.m */; };
 		0609D5F41D2B45E80081798D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5F11D2B45E80081798D /* XPathQuery.m */; };
 		0609D5F81D2B48FF0081798D /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0609D5F71D2B48FF0081798D /* libxml2.2.tbd */; };
+		0609D5FC1D2B4F1C0081798D /* ODSImageInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5FB1D2B4F1C0081798D /* ODSImageInfoView.m */; };
 		061BC9C91D2605D1004508A1 /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B21D2605D1004508A1 /* NSData+YYAdd.m */; };
 		061BC9CA1D2605D1004508A1 /* NSDate+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B41D2605D1004508A1 /* NSDate+YYAdd.m */; };
 		061BC9CB1D2605D1004508A1 /* NSNumber+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B61D2605D1004508A1 /* NSNumber+YYAdd.m */; };
@@ -123,6 +124,8 @@
 		0609D5F11D2B45E80081798D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		0609D5F71D2B48FF0081798D /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		0609D5F91D2B4B590081798D /* ODSCardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCardDelegate.h; sourceTree = "<group>"; };
+		0609D5FA1D2B4F1C0081798D /* ODSImageInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSImageInfoView.h; sourceTree = "<group>"; };
+		0609D5FB1D2B4F1C0081798D /* ODSImageInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSImageInfoView.m; sourceTree = "<group>"; };
 		061BC9B11D2605D1004508A1 /* NSData+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YYAdd.h"; sourceTree = "<group>"; };
 		061BC9B21D2605D1004508A1 /* NSData+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YYAdd.m"; sourceTree = "<group>"; };
 		061BC9B31D2605D1004508A1 /* NSDate+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YYAdd.h"; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 				062B1A871D23C70800483029 /* ODSAudioPlayView.m */,
 				0663E9571D2A084F00BA583E /* ODSDouAudioStreamerManager.h */,
 				0663E9581D2A084F00BA583E /* ODSDouAudioStreamerManager.m */,
+				0609D5FA1D2B4F1C0081798D /* ODSImageInfoView.h */,
+				0609D5FB1D2B4F1C0081798D /* ODSImageInfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1001,6 +1006,7 @@
 				062B1A3D1D23BCA400483029 /* ODSMoreOperationView.m in Sources */,
 				062B1A7D1D23BFEF00483029 /* DOUAudioRenderer.m in Sources */,
 				062B1A7F1D23BFEF00483029 /* DOUAudioStreamer+Options.m in Sources */,
+				0609D5FC1D2B4F1C0081798D /* ODSImageInfoView.m in Sources */,
 				062B1A7A1D23BFEF00483029 /* DOUAudioFrequencyAnalyzer.m in Sources */,
 				062B1A791D23BFEF00483029 /* DOUAudioFileProvider.m in Sources */,
 				061BCA371D2666D7004508A1 /* SDWebImagePrefetcher.m in Sources */,

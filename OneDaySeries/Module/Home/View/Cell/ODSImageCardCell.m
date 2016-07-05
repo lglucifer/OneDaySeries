@@ -137,7 +137,7 @@
 }
 
 - (void)inner_ShowImageText:(UIButton *)sender {
-    
+    [self.imageCardDelegate imageCardShowImageInfo:@""];
 }
 
 @end

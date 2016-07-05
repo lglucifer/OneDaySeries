@@ -15,6 +15,7 @@
 #import "ODSNavigationController.h"
 #import "ODSSettingViewController.h"
 #import "ACImageBrowser.h"
+#import "ODSImageInfoView.h"
 
 @interface ODSHomeViewController()<UICollectionViewDelegate, UICollectionViewDataSource, ODSCardDelegate, ACImageBrowserDelegate>
 
@@ -23,6 +24,8 @@
 @property (nonatomic, copy) NSArray *items;
 
 @property (nonatomic, weak) ODSTextCardCell *textCardCell;
+
+@property (nonatomic, weak) ODSImageInfoView *imageInfoView;
 
 @end
 
@@ -103,6 +106,16 @@
             [self.collectionView reloadData];
         });
     });
+    
+    ODSImageInfoView *imageInfoView = [[ODSImageInfoView alloc] init];
+    [self.view addSubview:imageInfoView];
+    self.imageInfoView = imageInfoView;
+    
+    [imageInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self.view).mas_offset(0);
+        make.top.mas_equalTo(self.view).mas_offset(CGRectGetHeight(self.view.frame));
+        make.height.mas_equalTo(self.view.mas_height);
+    }];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -142,11 +155,15 @@
 //}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:scrollView.contentOffset];
-    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    
 }
 
 #pragma mark -- 
+
+- (void)imageCardShowImageInfo:(NSString *)imageInfo {
+    self.imageInfoView.imageInfo = @"我喜欢创造新的三维世界，提出一些有悖于 “常理” 的东西。大家都太迷信 “常理” 了，但我总觉得一切可以大有不同，始终在寻找那些看不见的东西。为了拍摄那组沙漠的照片，我驱车驶入了摩洛哥的无人区。那里的空旷和浩淼是如此迷人，很难想象曾是一片汪洋，地能喷薄欲出。于是我就在想，这里再过几个世纪后又会变成怎样的场景呢？就像如果给你看两百年前纽约的照片，你肯定也会认为那是幻境。";
+    [self.imageInfoView show];
+}
 
 - (void)imageCardSelectImage:(NSArray *)images index:(NSInteger)index {
     NSMutableArray *browserImages = [NSMutableArray arrayWithArray:images];
