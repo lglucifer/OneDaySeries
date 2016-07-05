@@ -7,6 +7,7 @@
 //
 
 #import "ODSCardWebViewCell.h"
+#import "TFHppleElement.h"
 
 @interface ODSCardWebViewCell()<UIWebViewDelegate>
 
@@ -43,6 +44,11 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.operationView.hidden = NO;
+    [self card_webViewDidFinishLoad:webView];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return [self card_webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
 }
 
 @end

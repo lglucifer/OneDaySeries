@@ -132,7 +132,8 @@
 }
 
 - (void)inner_ShowBigImage:(UITapGestureRecognizer *)tap {
-    [self.imageCardDelegate imageCardSelectImage:self.imageCardModel.bigImageURLString];
+    NSArray *images = @[[NSURL URLWithString:self.imageCardModel.bigImageURLString]];
+    [self.imageCardDelegate imageCardSelectImage:images index:0];
 }
 
 - (void)inner_ShowImageText:(UIButton *)sender {

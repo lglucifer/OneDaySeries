@@ -7,8 +7,11 @@
 //
 
 #import "ODSCardWebViewCell.h"
+#import "ODSCardDelegate.h"
 
 @interface ODSTextCardCell : ODSCardWebViewCell
+
+@property (nonatomic, weak) id<ODSCardDelegate> textCardDelegate;
 
 - (void)loadHtml;
 

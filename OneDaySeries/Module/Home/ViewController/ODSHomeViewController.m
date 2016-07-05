@@ -16,7 +16,7 @@
 #import "ODSSettingViewController.h"
 #import "ACImageBrowser.h"
 
-@interface ODSHomeViewController()<UICollectionViewDelegate, UICollectionViewDataSource, ODSImageCardDelegate, ACImageBrowserDelegate>
+@interface ODSHomeViewController()<UICollectionViewDelegate, UICollectionViewDataSource, ODSCardDelegate, ACImageBrowserDelegate>
 
 @property (nonatomic, weak) UICollectionView *collectionView;
 
@@ -118,6 +118,7 @@
         [audioCardCell loadData:cardModel];
         return audioCardCell;
     } else {
+        textCardCell.textCardDelegate = self;
         [textCardCell loadData:cardModel];
         return textCardCell;
     }
@@ -147,11 +148,11 @@
 
 #pragma mark -- 
 
-- (void)imageCardSelectImage:(NSString *)bigImageURLString {
-    NSMutableArray *images = [NSMutableArray arrayWithObject:[NSURL URLWithString:bigImageURLString]];
-    ACImageBrowser *browser = [[ACImageBrowser alloc] initWithImagesURLArray:images];
+- (void)imageCardSelectImage:(NSArray *)images index:(NSInteger)index {
+    NSMutableArray *browserImages = [NSMutableArray arrayWithArray:images];
+    ACImageBrowser *browser = [[ACImageBrowser alloc] initWithImagesURLArray:browserImages];
     browser.delegate = self;
-    [browser setPageIndex:0];
+    [browser setPageIndex:index];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:browser];
     nc.navigationBarHidden = YES;
     nc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;

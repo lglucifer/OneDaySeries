@@ -13,4 +13,7 @@
 
 @property (nonatomic, weak) DMWebView *webView;
 
+- (void)card_webViewDidFinishLoad:(UIWebView *)webView;
+- (BOOL)card_webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+
 @end

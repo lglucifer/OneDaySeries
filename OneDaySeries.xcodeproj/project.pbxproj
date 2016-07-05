@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0609D5F21D2B45E80081798D /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5ED1D2B45E80081798D /* TFHpple.m */; };
+		0609D5F31D2B45E80081798D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5EF1D2B45E80081798D /* TFHppleElement.m */; };
+		0609D5F41D2B45E80081798D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0609D5F11D2B45E80081798D /* XPathQuery.m */; };
+		0609D5F81D2B48FF0081798D /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0609D5F71D2B48FF0081798D /* libxml2.2.tbd */; };
 		061BC9C91D2605D1004508A1 /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B21D2605D1004508A1 /* NSData+YYAdd.m */; };
 		061BC9CA1D2605D1004508A1 /* NSDate+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B41D2605D1004508A1 /* NSDate+YYAdd.m */; };
 		061BC9CB1D2605D1004508A1 /* NSNumber+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 061BC9B61D2605D1004508A1 /* NSNumber+YYAdd.m */; };
@@ -111,6 +115,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0609D5EC1D2B45E80081798D /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		0609D5ED1D2B45E80081798D /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		0609D5EE1D2B45E80081798D /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		0609D5EF1D2B45E80081798D /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		0609D5F01D2B45E80081798D /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		0609D5F11D2B45E80081798D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		0609D5F71D2B48FF0081798D /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		0609D5F91D2B4B590081798D /* ODSCardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCardDelegate.h; sourceTree = "<group>"; };
 		061BC9B11D2605D1004508A1 /* NSData+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YYAdd.h"; sourceTree = "<group>"; };
 		061BC9B21D2605D1004508A1 /* NSData+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YYAdd.m"; sourceTree = "<group>"; };
 		061BC9B31D2605D1004508A1 /* NSDate+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YYAdd.h"; sourceTree = "<group>"; };
@@ -326,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0609D5F81D2B48FF0081798D /* libxml2.2.tbd in Frameworks */,
 				0663E95B1D2A0B8800BA583E /* MediaPlayer.framework in Frameworks */,
 				061BC9D21D260611004508A1 /* libz.1.2.5.tbd in Frameworks */,
 			);
@@ -334,6 +347,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0609D5EB1D2B45E80081798D /* TFHpple */ = {
+			isa = PBXGroup;
+			children = (
+				0609D5EC1D2B45E80081798D /* TFHpple.h */,
+				0609D5ED1D2B45E80081798D /* TFHpple.m */,
+				0609D5EE1D2B45E80081798D /* TFHppleElement.h */,
+				0609D5EF1D2B45E80081798D /* TFHppleElement.m */,
+				0609D5F01D2B45E80081798D /* XPathQuery.h */,
+				0609D5F11D2B45E80081798D /* XPathQuery.m */,
+			);
+			path = TFHpple;
+			sourceTree = "<group>";
+		};
 		061BC9A21D2605D1004508A1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +452,7 @@
 		061BC9F81D260E40004508A1 /* AppleFramework */ = {
 			isa = PBXGroup;
 			children = (
+				0609D5F71D2B48FF0081798D /* libxml2.2.tbd */,
 				061BC9D11D260611004508A1 /* libz.1.2.5.tbd */,
 				0663E95A1D2A0B8800BA583E /* MediaPlayer.framework */,
 			);
@@ -544,6 +571,7 @@
 		062B19FE1D239AAE00483029 /* ThirdSource */ = {
 			isa = PBXGroup;
 			children = (
+				0609D5EB1D2B45E80081798D /* TFHpple */,
 				0663E9AB1D2A50E600BA583E /* ProgressHUD */,
 				0663E9A41D2A50BE00BA583E /* SDProgressView */,
 				0663E95C1D2A4F8900BA583E /* ACImageBrowser */,
@@ -688,6 +716,7 @@
 				062B1A461D23BD7300483029 /* ODSImageCardCell.m */,
 				062B1A481D23BD8500483029 /* ODSTextCardCell.h */,
 				062B1A491D23BD8500483029 /* ODSTextCardCell.m */,
+				0609D5F91D2B4B590081798D /* ODSCardDelegate.h */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -943,6 +972,7 @@
 				061BCA3A1D2666D7004508A1 /* UIImage+MultiFormat.m in Sources */,
 				061BC9FB1D2637A0004508A1 /* ODSCardScrollViewCell.m in Sources */,
 				062B1A831D23BFEF00483029 /* DOUMPMediaLibraryAssetLoader.m in Sources */,
+				0609D5F41D2B45E80081798D /* XPathQuery.m in Sources */,
 				062B1A7B1D23BFEF00483029 /* DOUAudioLPCM.m in Sources */,
 				062B1A771D23BFEF00483029 /* DOUAudioEventLoop.m in Sources */,
 				061BC9CB1D2605D1004508A1 /* NSNumber+YYAdd.m in Sources */,
@@ -954,6 +984,7 @@
 				062B1A471D23BD7300483029 /* ODSImageCardCell.m in Sources */,
 				062B1A2A1D23A2CB00483029 /* MASCompositeConstraint.m in Sources */,
 				062B1A821D23BFEF00483029 /* DOUEAGLView.m in Sources */,
+				0609D5F21D2B45E80081798D /* TFHpple.m in Sources */,
 				062B1A2E1D23A2CB00483029 /* MASViewAttribute.m in Sources */,
 				062B1A2C1D23A2CB00483029 /* MASConstraintMaker.m in Sources */,
 				062B1A301D23A2CB00483029 /* NSArray+MASAdditions.m in Sources */,
@@ -980,6 +1011,7 @@
 				D82FFDFE1D26786A00DE078C /* SGProgressView.m in Sources */,
 				062B1A751D23BFEF00483029 /* DOUAudioAnalyzer.m in Sources */,
 				0663E9901D2A4F8900BA583E /* ACZoomableImageScrollView.m in Sources */,
+				0609D5F31D2B45E80081798D /* TFHppleElement.m in Sources */,
 				062B1A811D23BFEF00483029 /* DOUAudioVisualizer.m in Sources */,
 				061BC9FE1D2637AD004508A1 /* ODSCardWebViewCell.m in Sources */,
 				061BCA3C1D2666D7004508A1 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1108,12 +1140,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PREFIX_HEADER = OneDaySeries/OneDaySeries.pch;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = OneDaySeries/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.uzero.VideoFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 			};
 			name = Debug;
 		};
@@ -1123,12 +1159,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PREFIX_HEADER = OneDaySeries/OneDaySeries.pch;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = OneDaySeries/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.uzero.VideoFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 			};
 			name = Release;
 		};
