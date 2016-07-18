@@ -121,16 +121,13 @@
 		06CEC5B41D2BA0760084B8A0 /* XZMRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEC5A51D2BA0760084B8A0 /* XZMRefreshConst.m */; };
 		06CEC5B51D2BA0760084B8A0 /* UIView+XZMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEC5A71D2BA0760084B8A0 /* UIView+XZMFrame.m */; };
 		06CEC5B61D2BA0760084B8A0 /* XZMRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06CEC5A91D2BA0760084B8A0 /* XZMRefresh.bundle */; };
-		06CEC6A41D2BAAFE0084B8A0 /* FeSpinnerTenDot.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEC6A11D2BAAFE0084B8A0 /* FeSpinnerTenDot.m */; };
-		06CEC6A51D2BAAFE0084B8A0 /* FeTenDot.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEC6A31D2BAAFE0084B8A0 /* FeTenDot.m */; };
-		06CEC6AA1D2BAB190084B8A0 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEC6A71D2BAB190084B8A0 /* FXBlurView.m */; };
-		06CEC6AB1D2BAB190084B8A0 /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEC6A91D2BAB190084B8A0 /* UIColor+flat.m */; };
 		D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */; };
 		D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF31D26660300DE078C /* ODSCollectionViewController.m */; };
 		D82FFDF81D26784D00DE078C /* OSDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDF71D26784D00DE078C /* OSDWebViewController.m */; };
 		D82FFDFE1D26786A00DE078C /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDFB1D26786A00DE078C /* SGProgressView.m */; };
 		D82FFDFF1D26786A00DE078C /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFDFD1D26786A00DE078C /* UINavigationController+SGProgress.m */; };
 		D82FFE021D267AD100DE078C /* ODSVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82FFE011D267AD100DE078C /* ODSVersionViewController.m */; };
+		D862EF761D3C7AE100190123 /* AnimationDotLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D862EF751D3C7AE100190123 /* AnimationDotLoadingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -368,14 +365,6 @@
 		06CEC5A81D2BA0760084B8A0 /* XZMRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZMRefreshConst.h; sourceTree = "<group>"; };
 		06CEC5A91D2BA0760084B8A0 /* XZMRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XZMRefresh.bundle; sourceTree = "<group>"; };
 		06CEC5AA1D2BA0760084B8A0 /* XZMRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZMRefresh.h; sourceTree = "<group>"; };
-		06CEC6A01D2BAAFE0084B8A0 /* FeSpinnerTenDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeSpinnerTenDot.h; sourceTree = "<group>"; };
-		06CEC6A11D2BAAFE0084B8A0 /* FeSpinnerTenDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeSpinnerTenDot.m; sourceTree = "<group>"; };
-		06CEC6A21D2BAAFE0084B8A0 /* FeTenDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeTenDot.h; sourceTree = "<group>"; };
-		06CEC6A31D2BAAFE0084B8A0 /* FeTenDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeTenDot.m; sourceTree = "<group>"; };
-		06CEC6A61D2BAB190084B8A0 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
-		06CEC6A71D2BAB190084B8A0 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
-		06CEC6A81D2BAB190084B8A0 /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
-		06CEC6A91D2BAB190084B8A0 /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
 		D82FFDEF1D2657A300DE078C /* ODSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSSettingViewController.h; sourceTree = "<group>"; };
 		D82FFDF01D2657A300DE078C /* ODSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSSettingViewController.m; sourceTree = "<group>"; };
 		D82FFDF21D26660300DE078C /* ODSCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSCollectionViewController.h; sourceTree = "<group>"; };
@@ -388,6 +377,8 @@
 		D82FFDFD1D26786A00DE078C /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
 		D82FFE001D267AD100DE078C /* ODSVersionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSVersionViewController.h; sourceTree = "<group>"; };
 		D82FFE011D267AD100DE078C /* ODSVersionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSVersionViewController.m; sourceTree = "<group>"; };
+		D862EF741D3C7AE100190123 /* AnimationDotLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationDotLoadingView.h; sourceTree = "<group>"; };
+		D862EF751D3C7AE100190123 /* AnimationDotLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationDotLoadingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -628,7 +619,6 @@
 		062B19FE1D239AAE00483029 /* ThirdSource */ = {
 			isa = PBXGroup;
 			children = (
-				06CEC69F1D2BAAFE0084B8A0 /* FeSpinner */,
 				06CEC58C1D2BA0760084B8A0 /* XZMRefresh */,
 				0609D5EB1D2B45E80081798D /* TFHpple */,
 				0663E9AB1D2A50E600BA583E /* ProgressHUD */,
@@ -667,6 +657,8 @@
 		062B1A011D239B0500483029 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D862EF741D3C7AE100190123 /* AnimationDotLoadingView.h */,
+				D862EF751D3C7AE100190123 /* AnimationDotLoadingView.m */,
 				062B1A3E1D23BD5300483029 /* Cell */,
 				062B1A381D23B0B700483029 /* ODSCardCollectionViewFlowLayout.h */,
 				062B1A391D23B0B700483029 /* ODSCardCollectionViewFlowLayout.m */,
@@ -959,21 +951,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		06CEC69F1D2BAAFE0084B8A0 /* FeSpinner */ = {
-			isa = PBXGroup;
-			children = (
-				06CEC6A61D2BAB190084B8A0 /* FXBlurView.h */,
-				06CEC6A71D2BAB190084B8A0 /* FXBlurView.m */,
-				06CEC6A81D2BAB190084B8A0 /* UIColor+flat.h */,
-				06CEC6A91D2BAB190084B8A0 /* UIColor+flat.m */,
-				06CEC6A01D2BAAFE0084B8A0 /* FeSpinnerTenDot.h */,
-				06CEC6A11D2BAAFE0084B8A0 /* FeSpinnerTenDot.m */,
-				06CEC6A21D2BAAFE0084B8A0 /* FeTenDot.h */,
-				06CEC6A31D2BAAFE0084B8A0 /* FeTenDot.m */,
-			);
-			path = FeSpinner;
-			sourceTree = "<group>";
-		};
 		D82FFDE81D2656EC00DE078C /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1104,6 +1081,7 @@
 				D82FFDF41D26660300DE078C /* ODSCollectionViewController.m in Sources */,
 				062B1A4A1D23BD8500483029 /* ODSTextCardCell.m in Sources */,
 				062B1A311D23A2CB00483029 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				D862EF761D3C7AE100190123 /* AnimationDotLoadingView.m in Sources */,
 				061BC9CF1D2605D1004508A1 /* UIDevice+YYAdd.m in Sources */,
 				062B1A7E1D23BFEF00483029 /* DOUAudioSpatialAnalyzer.m in Sources */,
 				06CEC5B11D2BA0760084B8A0 /* XZMRefreshGifHeader.m in Sources */,
@@ -1122,9 +1100,7 @@
 				061BCA3D1D2666D7004508A1 /* UIImageView+WebCache.m in Sources */,
 				061BC9F71D260C93004508A1 /* ODSCardModel.m in Sources */,
 				061BC9EC1D260C51004508A1 /* JSONModelError.m in Sources */,
-				06CEC6A41D2BAAFE0084B8A0 /* FeSpinnerTenDot.m in Sources */,
 				061BCA341D2666D7004508A1 /* SDWebImageDownloader.m in Sources */,
-				06CEC6A51D2BAAFE0084B8A0 /* FeTenDot.m in Sources */,
 				061BC9F11D260C51004508A1 /* JSONValueTransformer.m in Sources */,
 				061BC9CE1D2605D1004508A1 /* UIColor+YYAdd.m in Sources */,
 				D82FFDF11D2657A300DE078C /* ODSSettingViewController.m in Sources */,
@@ -1137,7 +1113,6 @@
 				062B1A411D23BD5300483029 /* ODSCardCollectionViewCell.m in Sources */,
 				061BCA3A1D2666D7004508A1 /* UIImage+MultiFormat.m in Sources */,
 				061BC9FB1D2637A0004508A1 /* ODSCardScrollViewCell.m in Sources */,
-				06CEC6AA1D2BAB190084B8A0 /* FXBlurView.m in Sources */,
 				062B1A831D23BFEF00483029 /* DOUMPMediaLibraryAssetLoader.m in Sources */,
 				0609D5F41D2B45E80081798D /* XPathQuery.m in Sources */,
 				062B1A7B1D23BFEF00483029 /* DOUAudioLPCM.m in Sources */,
@@ -1163,7 +1138,6 @@
 				D82FFDF81D26784D00DE078C /* OSDWebViewController.m in Sources */,
 				062B1A2B1D23A2CB00483029 /* MASConstraint.m in Sources */,
 				06CEC5AC1D2BA0760084B8A0 /* UIScrollView+XZMExtension.m in Sources */,
-				06CEC6AB1D2BAB190084B8A0 /* UIColor+flat.m in Sources */,
 				061BC9EA1D260C51004508A1 /* JSONModel.m in Sources */,
 				062B1A441D23BD6B00483029 /* ODSAudioCardCell.m in Sources */,
 				062B1A851D23BFEF00483029 /* NSData+DOUMappedFile.m in Sources */,

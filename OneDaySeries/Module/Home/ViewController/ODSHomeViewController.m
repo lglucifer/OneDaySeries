@@ -8,11 +8,12 @@
 
 #import "ODSHomeViewController.h"
 #import "ODSSettingViewController.h"
-#import "FeSpinnerTenDot.h"
 
-@interface ODSHomeViewController()<FeSpinnerTenDotDelegate>
+#import "AnimationDotLoadingView.h"
 
-@property (nonatomic, strong) FeSpinnerTenDot *spinner;
+@interface ODSHomeViewController()
+
+@property (nonatomic,strong) AnimationDotLoadingView * aniView;
 
 @end
 
@@ -34,13 +35,10 @@
     
     self.collectionView.hidden = YES;
     
-    _spinner = [[FeSpinnerTenDot alloc] initWithView:self.view withBlur:NO];
-    _spinner.delegate = self;
-    [self.view addSubview:_spinner];
-    [_spinner show];
-    CGAffineTransform newTransform =
-    CGAffineTransformScale(_spinner.transform, 0.6, 0.6);
-    [_spinner setTransform:newTransform];
+    
+    self.aniView = [[AnimationDotLoadingView alloc] initWithFrame:CGRectMake(ODSScreenWidth/2-5, 200, 10, 10)];
+    self.aniView.backgroundColor = [UIColor colorWithHexString:@"#4b5c84"];
+    [self.aniView showInView:self.view];
 
     
     dispatch_async(dispatch_queue_create(NULL, NULL), ^{
@@ -80,7 +78,8 @@
         self.items = asyncItems.copy;
         dispatch_async(dispatch_get_main_queue(), ^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [_spinner dismiss];
+//                [_spinner dismiss];
+                [_aniView dismiss];
                 self.collectionView.hidden = NO;
                 [self.collectionView reloadData];
             });
@@ -88,9 +87,7 @@
     });
 }
 
-- (void)FeSpinnerTenDotDidDismiss:(FeSpinnerTenDot *)sender {
-    NSLog(@"did dismiss");
-}
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.items.count;
